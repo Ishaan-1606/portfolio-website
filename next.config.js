@@ -16,9 +16,8 @@ const config = withPWA({
     defaultLocale: "en",
   },
 
-  // Static export and setting distDir to 'out'
-  output: 'export', // Enable static export
-  distDir: 'out', // Output to 'out' directory for Netlify
+  // Default output directory
+  distDir: '.next', // Default directory
 });
 
 export default config;
