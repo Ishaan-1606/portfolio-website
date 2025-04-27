@@ -215,7 +215,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                A passionate B.Tech CSE student with a strong focus on Android development, dynamic problem-solving, and cutting-edge tech stacks like Kotlin, Java, and AWS.
+                A budding B.Tech CSE student with a strong focus on Android development, dynamic problem-solving, and cutting-edge tech stacks like Kotlin, Java, and AWS.
               </p>
             </div>
             <span
