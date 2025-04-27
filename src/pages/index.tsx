@@ -206,7 +206,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  Ishaan Sharma.
+                  Ishaan Sharma ain't ever gonna give you up ;|
                 </span>
               </h1>
               <p
