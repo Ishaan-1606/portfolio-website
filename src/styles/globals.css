@@ -6,34 +6,35 @@
 
 @layer base {
   :root {
-    --background: 240 27.9% 5.7%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 237 99% 74%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 214.2 98.47% 74.31%;
-    --secondary-foreground: 218 11% 65%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-
+    /* Jet black background and enhanced color contrast */
+    --background: 0 0% 0%; /* Jet black background */
+    --foreground: 0 0% 100%; /* White text for high contrast */
+    
+    --card: 0 90% 20%; /* Deep red-maroon for card background */
+    --card-foreground: 100% 100% 100%; /* White text inside cards */
+    
+    --popover: 340 80% 30%; /* Dark magenta popover */
+    --popover-foreground: 100% 100% 100%; /* White text inside popovers */
+    
+    --primary: 0 90% 60%; /* Bold red for primary accents */
+    --primary-foreground: 100% 100% 100%; /* White text */
+    
+    --secondary: 38 100% 60%; /* Vibrant orange for secondary accents */
+    --secondary-foreground: 100% 100% 100%; /* White text */
+    
+    --muted: 0 0% 40%; /* Dark gray for muted elements */
+    --muted-foreground: 0 0% 70%; /* Lighter gray text */
+    
+    --accent: 320 100% 50%; /* Bright magenta for accent items */
+    --accent-foreground: 100% 100% 100%; /* White text for accent items */
+    
+    --destructive: 0 100% 50%; /* Bright red for destructive actions */
+    --destructive-foreground: 100% 100% 100%; /* White text */
+    
+    --border: 0 0% 40%; /* Dark gray border */
+    --input: 0 0% 25%; /* Dark background for input fields */
+    --ring: 38 100% 60%; /* Orange ring accent */
+    
     --radius: 0.5rem;
   }
 }
@@ -55,7 +56,8 @@
     @apply antialiased;
   }
   body {
-    @apply bg-background text-foreground cursor-wait;
+    @apply bg-background text-foreground cursor-pointer;
+    font-family: "ClashGrotesk-Variable", sans-serif; /* Default font */
   }
   section {
     scroll-margin-top: 60px;
@@ -83,19 +85,21 @@
   .clash-grotesk {
     font-family: "ClashGrotesk-Variable", sans-serif;
   }
+
   .text-gradient {
     @apply bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent;
   }
+  
   .nav-active {
     color: rgb(226 232 240) !important;
     @apply text-sm lowercase tracking-tight text-slate-200;
   }
+  
   .nav-link {
-    /* Remove the styles from nav-link class */
     @apply text-sm lowercase tracking-tight text-slate-400;
   }
 
-  /* blinking animation */
+  /* Blinking animation */
   @keyframes blink {
     from {
       opacity: 1;
@@ -106,5 +110,45 @@
   }
   .animate-blink {
     animation: blink 1s infinite;
+  }
+
+  /* Accent styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary;
+  }
+
+  .input-field {
+    @apply border border-border bg-input text-foreground placeholder:text-muted-foreground rounded-lg focus:ring-2 focus:ring-ring;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground p-6 rounded-lg shadow-lg;
+  }
+
+  .highlight {
+    @apply text-accent bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .highlight-accent {
+    @apply text-accent font-bold;
+  }
+
+  /* Scrollable container */
+  .scroll-container {
+    @apply overflow-auto scrollbar-thin scrollbar-thumb-rounded-lg scrollbar-track-rounded-lg;
+  }
+
+  /* New button styles for dark theme */
+  .btn-danger {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive-foreground hover:text-destructive;
+  }
+
+  /* New links for dark mode */
+  .link-dark {
+    @apply text-primary hover:text-secondary transition-all ease-in-out duration-300;
   }
 }
