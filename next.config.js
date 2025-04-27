@@ -16,8 +16,12 @@ const config = withPWA({
     defaultLocale: "en",
   },
 
-  // Default output directory
   distDir: '.next', // Default directory
+
+  // You may want to add experimental flags for better TypeScript integration
+  experimental: {
+    esmExternals: true, // Make sure ES module externals are supported
+  },
 });
 
 export default config;
