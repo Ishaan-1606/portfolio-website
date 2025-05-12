@@ -32,37 +32,34 @@ const aboutStats = [
   { label: "Technologies mastered", value: "8+" },
   { label: "Companies worked in ", value: "2" },
 ];
-
+// image:"/assets/video.webm"(format ka dhyan rakhna)
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
-    image: "/assets/unqueue.webm",
-    href: "https://unqueue.shop/",
-  },
-  {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
-    image: "/assets/infinitevps.webm",
-    href: "#",
-  },
-  {
-    title: "TranslateBot",
-    description: "Powerful Multilingual Translation Bot for Discord",
-    image: "/assets/translate_bot.webm",
+    title: "Quant-WIZ",
+    description:
+      "Built QuantWiz, a finance-focused chatbot for budgeting and expense tracking, with plans to enhance it using fine-tuned AI and real-time financial data integration.",
+    image: "/assets/Quant-WIZ.webm",
     href: "https://translatebot.app/",
-  },
-  {
-    title: "Wrona",
-    description: "Robotics-focused technology company",
-    image: "/assets/wrona.jpeg",
-    href: "https://www.wrona.com/",
   },
   {
     title: "This website",
     description: "My personal website",
-    image: "/assets/portfolio.webm",
-    href: "https://github.com/Ishaan-1606",
+    image: "/assets/portfolio.jpg",
+    href: "https://github.com/Ishaan-1606/portfolio-website",
+  },
+  {
+    title: "Quake Guard",
+    description:
+      "Android Application aimed at mitigating earthquake in particular as a disaster",
+    image: "/assets/quakeG.jpg",
+    href: "https://github.com/Ishaan-1606/Quake-Guard",
+  },
+  {
+    title: "Vitalis",
+    description:
+      "A wearable computing project that connects to esp32 and heart and sp02 sensor to give vital information",
+    image: "/assets/vitalis.jpg",
+    href: "https://github.com/Ishaan-1606/vitalis",
   },
 ];
 
@@ -206,7 +203,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  Ishaan Sharma ain't ever gonna give you up ;|
+                  Ishaan Sharma
                 </span>
               </h1>
               <p
@@ -215,7 +212,9 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                A budding B.Tech CSE student with a strong focus on Android development, dynamic problem-solving, and cutting-edge tech stacks like Kotlin, Java, and AWS.
+                A budding B.Tech CSE student with a strong focus on Android
+                development, dynamic problem-solving, and cutting-edge tech
+                stacks like Kotlin, Java, and AWS.
               </p>
             </div>
             <span
@@ -268,8 +267,17 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-
-            I am a driven B.Tech CSE student at VIT Chennai with a deep passion for Android development, dynamic problem-solving, and cloud computing. With a strong foundation in Kotlin, Java, and AWS, I have worked on a variety of app development projects, including a smart home automation system and an expense tracker. My problem-solving skills are complemented by a solid understanding of data structures, algorithms, and emerging technologies. As the sponsorship and marketing lead for my college&apos;s Android Club, I combine technical expertise with leadership experience, preparing for impactful roles in the tech industry.
+              I am a driven B.Tech CSE student at VIT Chennai with a deep
+              passion for Android development, dynamic problem-solving, and
+              cloud computing. With a strong foundation in Kotlin, Java, and
+              AWS, I have worked on a variety of app development projects,
+              including a smart home automation system and an expense tracker.
+              My problem-solving skills are complemented by a solid
+              understanding of data structures, algorithms, and emerging
+              technologies. As the sponsorship and marketing lead for my
+              college&apos;s Android Club, I combine technical expertise with
+              leadership experience, preparing for impactful roles in the tech
+              industry.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -314,8 +322,7 @@ export default function Home() {
               Streamlined digital experiences.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;ve worked on a variety of projects, from small websites to
-              large-scale web applications. Here are some of my favorites:
+              I&apos;ve worked on a variety of projects, most of them are android applications and a couple of websites. Here are some of my favorites:
             </p>
 
             {/* Carousel */}
